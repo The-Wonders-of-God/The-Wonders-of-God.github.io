@@ -1,0 +1,169 @@
+a{
+text-decoration: none;
+cursor: pointer;
+}
+body {
+background : url('../background_images/summer/woods2.jpg');
+background-repeat:no-repeat;
+background-position:center center;
+background-attachment:fixed;
+background-size:cover;
+}
+div.main {
+   margin: auto;
+   width: 60%;
+   text-align: center;
+   text-overflow: ellipsis;
+   background-color: rgb(215,215,255);
+   border-radius: 15px;
+   overflow: hidden;
+   font-family: none;
+   padding: 12px 10px;
+}
+ div.heder{
+ list-style-type:none;
+ background-color: pink;
+ width:55%;
+ margin: auto;
+ text-align: center;
+ font-family: New Century Schoolbook,
+ serif;font-style: oblique;
+ font-size: 250%;
+ border-radius: 25px;
+ overflow: hidden;
+}
+div.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    width: 15%;
+    height: 350px;
+    border: 3px solid #6B9ADB;
+    background-color: rgb(215,215,255);
+    text-align: left;
+    border-radius: 25px;
+    padding: 20px,20px,20px,20px;
+}
+
+.topbutton {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px 0px;
+    cursor: pointer;
+    
+    width: 15%;
+    height: 20px;
+    float: center;
+}
+#cssmenu > ul > li > a {
+  display: block;
+color: black;
+}
+#cssmenu ul ul {
+  padding: 10px;
+  display: none;
+}
+#cssmenu ul ul a {
+  color: black;
+  display: block;
+}
+		#heademenu {
+			margin: 0;
+			padding: 0;
+		}
+		#menubutten {
+			background-color: #4CAF50;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 15px;
+			margin: 5px 0px;
+			cursor: pointer;
+			width: 15%;
+			height: 20px;
+			float: center;
+		}
+		#menubutten ul {
+			background-color: #4CAF50;;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			font-size: 15px;
+			list-style-type: none;
+		}
+		#menubutten li {
+			position: relative;
+		}
+		#menubutten a {
+			display: block;
+			text-decoration: none;
+			color: white;
+		}
+
+		#menubutten ul ul {
+			position: absolute;
+			left: 0;
+			visibility: hidden;
+			opacity: 0;
+		}
+		#menubutten ul ul ul {
+			left: 100%;
+			top: 0;
+		}
+	
+	/*#menubutten li:hover, #menubutten li:hover li {
+			background: #ddd;
+		}
+	
+		/*#menubutten li li:hover, #menubutten li li:hover li {
+			background: #bbb;
+		}
+	
+		#menubutten li li li:hover {
+			background: #999;
+		}*/
+	
+		#menubutten li:hover > ul {
+			visibility: visible;
+			opacity: 1;
+		}
+
+
+
+
+@media screen and (max-width: 770px) {
+    div.heder {
+        font-size: 200%;
+    }
+}
+@media screen and (max-width: 620px) {
+    div.sidebar {
+        display: none;
+    }
+    div.main{
+    	width: 90%;
+    }
+    div.heder{
+    	width: 70%;
+    }
+}
+@media screen and (min-width: 621px) {
+	#menubutten {
+		display: none;
+	}
+}
+@media screen and (max-width: 340px) {
+	div.main{
+		margin: 0;
+    	width: 100%;
+    }
+	div.heder {
+		font-size: 150%;
+		width:95%;
+	}
+}
