@@ -18,13 +18,10 @@ function findGetParameter(parameterName) {
 function getpostyear() {
 	postsyear = [];
 	var date = new Date();
-	return $.ajax({
+	return $.get("/javascript/posts.json", function( jsontext ){
 		//put all posts in postsyear array
-		url : dir1,
-		success: function (data) {
-		    $(data).find("a").attr("href", function (i, val) {
-		            	postsyear.push(val);
-		    });
+		var json = JSON.parse(jsontext);
+		postsyear = json.posts;
 		    postsyear.sort(function(a, b){return parseInt(a.substring(12,a.length), 10) - parseInt(b.substring(12,b.length), 10)});
 		    //format the posts into a string
 			for (var i = 2014; i < date.getFullYear(); i++){
@@ -35,7 +32,7 @@ function getpostyear() {
 						if ((i%2) == 0){
 							 yearString += "<li class='even'><a href='?post=" + postsyear[j] + "'><span>" + postsyear[j].substring(0,11) +"</span></a></li>" ;
 						} else {
-							 yearString +=  "<li class='odd'><a href='?post=" + postsyear[j] + "'><span>"+ postsyear[j].substring(0,10) +"</span></a></li>" ;
+							 yearString +=  "<li class='odd'><a href='?post=" + postsyear[j] + "'><span>"+ postsyear[j].substring(0,11) +"</span></a></li>" ;
 						}
 					}
 				}
@@ -46,8 +43,8 @@ function getpostyear() {
 				if ( document.getElementById("innercssmenu") != null){document.getElementById("innercssmenu").innerHTML +=  yearString + "</ul> </li>" ;}
 				if ( document.getElementById("menu2") != null){document.getElementById("menu2").innerHTML +=  yearString + "</ul> </li>" ;}
 			}
-		}
-	});
+		
+	},'text');
 }
 
 //animate side bar menu
