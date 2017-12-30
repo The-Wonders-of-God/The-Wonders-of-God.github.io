@@ -22,7 +22,6 @@ function getpostyear() {
 		//put all posts in postsyear array
 		var json = JSON.parse(jsontext);
 		postsyear = json.posts;
-		    postsyear.sort(function(a, b){return parseInt(a.substring(12,a.length), 10) - parseInt(b.substring(12,b.length), 10)});
 		    //format the posts into a string
 			for (var i = 2014; i < date.getFullYear(); i++){
 				var yearString = "";
