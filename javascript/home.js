@@ -8,16 +8,31 @@ var addposts = "";
 	return $.get("/javascript/posts.json", function( jsontext ){
 		var json = JSON.parse(jsontext);
 		postnames = json.posts;
-			for(var j=1; j<num+1; j++){
-				$.get(dir1 + postnames[postnames.length - j], function( posttext ) {
+				$.get(dir1 + postnames[postnames.length - 1], function( posttext ) {
 					if(posttext != null){
-    					addposts += posttext + "<a href='/?post="+postnames[postnames.length - j] + "'>Comments</a>";
+    					addposts += posttext + "<a href='/?post="+postnames[postnames.length - 1] + "'>Comments</a>";
     				} else {
     					addposts += "<h2>Sorry thare was an error</h2>";
     				}
-    				if(j+1>=num) {if ( document.getElementById("post") != null){document.getElementById("post").innerHTML = addposts ;}}
 				}, 'text');
-			}
+				$.get(dir1 + postnames[postnames.length - 2], function( posttext ) {
+					if(posttext != null){
+    					addposts += posttext + "<a href='/?post="+postnames[postnames.length - 2] + "'>Comments</a>";
+    				} else {
+    					addposts += "<h2>Sorry thare was an error</h2>";
+    				}
+				}, 'text');
+			
+
+	$.get(dir1 + postnames[postnames.length - 3], function( posttext ) {
+					if(posttext != null){
+    					addposts += posttext + "<a href='/?post="+postnames[postnames.length - 3] + "'>Comments</a>";
+    				} else {
+    					addposts += "<h2>Sorry thare was an error</h2>";
+    				}
+    				if ( document.getElementById("post") != null){document.getElementById("post").innerHTML = addposts ;}
+				}, 'text');
+			
 	},'text');
 }
 
@@ -33,7 +48,7 @@ $.get(dir1 + post , function( posttext ) {
 
 //if post selected display it else display 3 most recent posts
 if(findGetParameter("post") == null){
-	getresentposts(3);
+	getresentposts();
 } else {
 	getpost(findGetParameter("post"));
 }
