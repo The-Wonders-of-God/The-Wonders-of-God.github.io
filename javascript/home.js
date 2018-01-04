@@ -1,4 +1,5 @@
-comments = "";
+comments = "<br/><br/><div id='disqus_thread'></div>\
+<noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript'>comments powered by Disqus.</a></noscript>";
 
 //add newest posts to page
 function getresentposts(num) {
@@ -10,11 +11,11 @@ var addposts = "";
 			for(var j=1; j<num+1; j++){
 				$.get(dir1 + postnames[postnames.length - j], function( posttext ) {
 					if(posttext != null){
-    					addposts += posttext + comments;
+    					addposts += posttext + "<a href='/?post="+postnames[postnames.length - j] + "'>Comments</a>";
     				} else {
     					addposts += "<h2>Sorry thare was an error</h2>";
     				}
-    				if(j+1>=num) {if ( document.getElementById("post") != null){document.getElementById("post").innerHTML = addposts;}}
+    				if(j+1>=num) {if ( document.getElementById("post") != null){document.getElementById("post").innerHTML = addposts ;}}
 				}, 'text');
 			}
 	},'text');

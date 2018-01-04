@@ -23,7 +23,7 @@ function getpostyear() {
 		var json = JSON.parse(jsontext);
 		postsyear = json.posts;
 		    //format the posts into a string
-			for (var i = 2014; i < date.getFullYear(); i++){
+			for (var i = 2014; i <= date.getFullYear(); i++){
 				var yearString = "";
 				yearString += "<li class='has-sub'><a href='#'><span>" + i +"</span></a><ul>" ;
 				for(var j=0; j<postsyear.length; j++){
