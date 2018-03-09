@@ -25,8 +25,7 @@ function getmonth(){
 }
 
 //pick random image from array and set it as background
-$.when(getmonth()).done(function() {
-if ( document.getElementById("body") != null){document.getElementById("body").style = "background : url('" + dir + images[Math.floor(Math.random() * images.length)] + "');background-repeat:no-repeat; background-position:center center; background-attachment:fixed; background-size:cover;";}
+$.when(getmonth()).done(function() {document.getElementById("body").style = "background : url('" + dir + images[Math.floor(Math.random() * images.length)] + "');background-repeat:no-repeat; background-position:center center; background-attachment:fixed; background-size:cover;";
 });
 
 
