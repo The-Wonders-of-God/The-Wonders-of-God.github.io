@@ -1,27 +1,27 @@
 {
 	"spring":[
-		"woods1.jpg",
-		"woods2.jpg",
-		"woods3.jpg",
-		"woods4.jpg"],
+		"1.jpg",
+		"2.jpeg",
+		"3.jpeg",
+		"4.jpeg",
+		"5.jpeg"],
 	"summer":[
-		"woods1.jpg",
-		"woods2.jpg",
-		"woods3.jpg",
-		"woods4.jpg"],
+		"1.jpeg",
+		"2.jpeg",
+		"3.jpeg",
+		"4.jpeg",
+		"5.jpeg",
+		"6.jpeg"],
 	"fall":[
-		"woods1.jpeg",
-		"woods2.jpeg",
-		"woods3.jpeg",
-		"woods4.jpeg",
-		"woods5.jpg",
-		"woods6.jpg",
-		"woods7.jpeg"],
+		"1.jpeg",
+		"2.jpeg",
+		"3.jpeg",
+		"4.jpg",
+		"5.jpeg"],
 	"winter":[
-		"woods1.jpeg",
-		"woods2.png",
-		"woods3.jpeg",
-		"woods4.jpeg",
-		"woods5.jpeg",
-		"woods6.jpg"]
+		"1.jpeg",
+		"2.jpeg",
+		"3.jpeg",
+		"4.jpeg",
+		"5.jpeg"]
 }

@@ -3,7 +3,7 @@ var dir = "../background_images/";
 
 //get array of images
 var images = [];
-function ab(){
+function getmonth(){
 	return $.get("/javascript/background.json", function( jsontext ){
 		var json = JSON.parse(jsontext);
 		//find the season
@@ -25,7 +25,7 @@ function ab(){
 }
 
 //pick random image from array and set it as background
-$.when(ab()).done(function() {
+$.when(getmonth()).done(function() {
 if ( document.getElementById("body") != null){document.getElementById("body").style = "background : url('" + dir + images[Math.floor(Math.random() * images.length)] + "');background-repeat:no-repeat; background-position:center center; background-attachment:fixed; background-size:cover;";}
 });
 
