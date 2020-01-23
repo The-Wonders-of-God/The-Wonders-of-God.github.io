@@ -1,5 +1,6 @@
+//Made by Jacob Piela
 var posts = [];
-var dir1 = "../posts/";
+var postsDir = "../posts/";
 var postsyear = [];
 
 function findGetParameter(parameterName) {
@@ -15,7 +16,7 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-function getpostyear() {
+function getPostYear() {
 	postsyear = [];
 	var date = new Date();
 	return $.get("/javascript/posts.json", function( jsontext ){
@@ -47,7 +48,7 @@ function getpostyear() {
 }
 
 //animate side bar menu
-$.when(getpostyear()).done(function() {
+$.when(getPostYear()).done(function() {
 $('#cssmenu ul ul li:odd').addClass('odd');
 $('#cssmenu ul ul li:even').addClass('even');
 $('#cssmenu > ul > li > a').click(function() {

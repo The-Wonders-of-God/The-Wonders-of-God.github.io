@@ -1,4 +1,4 @@
-
+//Made by Jacob Piela
 var dir = "../background_images/";
 
 //get array of images

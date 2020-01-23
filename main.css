@@ -116,17 +116,6 @@ color: black;
 			top: 0;
 		}
 	
-	/*#menubutten li:hover, #menubutten li:hover li {
-			background: #ddd;
-		}
-	
-		/*#menubutten li li:hover, #menubutten li li:hover li {
-			background: #bbb;
-		}
-	
-		#menubutten li li li:hover {
-			background: #999;
-		}*/
 	
 		#menubutten li:hover > ul {
 			visibility: visible;
@@ -148,15 +137,6 @@ color: black;
     height: 100%;
 }
 
-/*@media screen and (max-width: 760px) {
-.container {
-    position: relative;
-    margin: auto;
-    width: 60%;
-    height: 0;
-    padding-bottom: 27%;
-}
-}*/
 
 @media screen and (max-width: 770px) {
     div.heder {
